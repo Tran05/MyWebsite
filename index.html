@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Trang Cá Nhân Của Tôi</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome To My Website </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home" onclick="showSection('home')">Home</a></li>
+            <li><a href="#about" onclick="showSection('about')">Thông Tin Cá Nhân</a></li>
+            <li><a href="#skills" onclick="showSection('skills')">Kỹ Năng</a></li>
+            <li><a href="#contact" onclick="showSection('contact')">Liên Hệ</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home" class="content-section">
+            <h2>Chào Mừng Đến Với Trang Cá Nhân Của Tôi!</h2>
+            <p>Trang web này chứa thông tin về tôi, các kỹ năng của tôi và cách liên hệ với tôi.</p>
+        </section>
+        <section id="about" class="content-section" style="display: none;">
+            <h2>Thông Tin Cá Nhân</h2>
+            <p>Họ và tên:Huỳnh Thị Ngọc Trân
+            <p>Mã số sinh viên:23130342
+            <p>Lớp:DH23DTC
+            <p>Khoa Công Nghệ Thông Tin Trường Đại Học Nông Lâm 
+            <p>Niên khóa:2023-2027
+             
+        </section>
+        <section id="skills" class="content-section" style="display: none;">
+            <h2>Kỹ Năng</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript</li>
+                <li>React, Vue.js</li>
+                <li>Node.js, Express</li>
+                <li>MySQL, MongoDB</li>
+            </ul>
+        </section>
+        <section id="contact" class="content-section" style="display: none;">
+            <h2>Liên Hệ</h2>
+            <p>Email: 23130342@st.hcmuaf.edu.vn</p>
+            <p>SĐT: 0987735239</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Huỳnh Thị Ngọc Trân</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            const activeSection = document.getElementById(sectionId);
+            if (activeSection) {
+                activeSection.style.display = 'block';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('home');
+        });
+    </script>
+</body>
+</html>
