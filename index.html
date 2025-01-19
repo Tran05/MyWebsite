@@ -14,9 +14,10 @@
         <ul>
             <li><a href="#home" onclick="showSection('home')">Home</a></li>
             <li><a href="#about" onclick="showSection('about')">About</a></li>
-            <li><a href="#skills" onclick="showSection('skills')">Skill</a></li>
             <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
             <li><a href="#labs" onclick="showSection('labs')">Labs</a></li> 
+            <li><a href="https://tran05.github.io/PersonnalResult/">Result</a></li>
+            
             
             
         </ul>
@@ -33,21 +34,13 @@
            
              
         </section>
-        <section id="skills" class="content-section" style="display: none;">
-            <h2>Skill</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript</li>
-                <li>React, Vue.js</li>
-                <li>Node.js, Express</li>
-               
-            </ul>
-        </section>
+        
         <section id="contact" class="content-section" style="display: none;">
             <h2>Contact</h2>
             <p>Email: 23130342@st.hcmuaf.edu.vn</p>
             <p>Phone: 0987735239</p>
         </section>
-        <section id="labs" class="content-section" style="display: none;"> <!-- Phần mới cho Labs -->
+        <section id="labs" class="content-section" style="display: none;"> 
             <h2>Labs</h2>
             <ul>
                 <li><a href="https://tran05.github.io/lab1.html">Lab 1</a></li>
@@ -56,29 +49,36 @@
                 <li><a href="https://tran05.github.io/lab4.html">Lab 4</a></li>
                 <li><a href="https://tran05.github.io/lab5.html">Lab 5</a></li>
                 <li><a href="https://tran05.github.io/lab6.html">Lab 6</a></li>
-
+               
             </ul>
-        </section>
+                </section>
+                      
+        
     </main>
     <footer>
         <p>© 2024 Huỳnh Thị Ngọc Trân</p>
     </footer>
 
-    <script>
-        function showSection(sectionId) {
-            const sections = document.querySelectorAll('.content-section');
-            sections.forEach(section => {
-                section.style.display = 'none';
-            });
-            const activeSection = document.getElementById(sectionId);
-            if (activeSection) {
-                activeSection.style.display = 'block';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            showSection('home');
+   <script>
+    function showSection(sectionId) {
+      
+        const sections = document.querySelectorAll('.content-section');
+        sections.forEach(section => {
+            section.style.display = 'none'; // Ẩn tất cả
         });
-    </script>
+
+      
+        const activeSection = document.getElementById(sectionId);
+        if (activeSection) {
+            activeSection.style.display = 'block'; // Hiển thị phần được chọn
+        }
+    }
+
+  
+    document.addEventListener('DOMContentLoaded', function() {
+        showSection('home');
+    });
+</script>
+
 </body>
 </html>
